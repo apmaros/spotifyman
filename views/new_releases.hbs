@@ -1,0 +1,12 @@
+<h1>New Releases</h1>
+
+<ul>
+  {{#each albums}}
+    <li>
+      <h3>{{name}}</h3>
+      <img src={{images.1.url}}><br>
+      {{album_type}}
+      <a href={{external_urls.spotify}} target="blank">play</a>
+    </li>
+  {{/each}}
+</ul>
