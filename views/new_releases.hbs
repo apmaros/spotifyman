@@ -1,12 +1,21 @@
-<h1>New Releases</h1>
+<div class="ui justified container">
+  <h1 class="ui header">New Releases</h1>
+  <div class="ui centered cards">
+    {{#each albums}}
 
-<ul>
-  {{#each albums}}
-    <li>
-      <h3>{{name}}</h3>
-      <img src={{images.1.url}}><br>
-      {{album_type}}
-      <a href={{external_urls.spotify}} target="blank">play</a>
-    </li>
-  {{/each}}
-</ul>
+      <div class="ui card">
+        <img class="ui medium circular image" src={{images.1.url}}>
+        <div class="content">
+          <div class="header">{{name}}</div>
+          <div class="meta">
+            album type: {{album_type}}
+          </div>
+          <div class="extra content">
+            <a class="ui button" href={{external_urls.spotify}} target="_blank">Play</a>
+          </div>
+        </div>
+      </div>
+
+    {{/each}}
+  </div>
+</div>

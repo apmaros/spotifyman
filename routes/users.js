@@ -105,7 +105,7 @@ router.get('/new-releases', function(req, res){
   };
 
   request.get(options, function(error, response, body) {
-    console.log(body);
+    console.log(body.albums);
     res.render('new_releases', { albums: body.albums.items,
                                  back: body.previous,
                                  next: body.next });
@@ -142,7 +142,3 @@ router.get('/refresh-token', function(req, res) {
 });
 
 module.exports = router;
-
-// access_token=BQA4OKd7fVVMPBn7a-qNjZBBdjFi1-SL-zguEANfhjd2bcyRbHcOkArtJF2_2hx1y9yeRwvY1mb0_8ntf3i8bZy5eGsQOG1EnJvDtnd9CVYObfC1iueWP1FcHEAGrydMB2qtovpz30TZ2CNGr0Z79_h9-Zrn0VXW
-
-//   refresh_token=AQCrx506isTvdGM4OwVETt6HuVnkGbblx9GJH279TvzY8l2Ueqnlsc6CziWtUpEDsdU5qKNVYAfVmWG9eWQQ_g7jlNAPIUR99xzcD1JydHu-6Zt5c1U9hYOIOizJQ_W4Hb4
